@@ -15,12 +15,13 @@ $(function(){
  //an addOne and addAll method
   var ListView = Backbone.View.extend({
         initialize: function(){
-          _.bindAll(this, 'addOne', 'addAll');
-          this.collection.bind('add', this.addOne);
+          // _.bindAll(this, 'addOne', 'addAll');
+          // this.collection.bind('add', this.addOne);
           alert("Alerts suck.");
+          // Collection.fetch();
         },
         addOne: function (item) {
-          var view = new CommentView({model: item});
+          var view = new ListView({model: item});
           $(this.el).append(view.render().el);
         },
         addAll: function () {
